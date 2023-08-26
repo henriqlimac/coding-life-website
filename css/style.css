@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+button, input {
+    background: none;
+    border: none;
+}
+
+:root {
+    --text-xs: 0.50rem;
+    --text-sm: 0.75rem;
+    --text-base: 1rem;
+    --text-lg: 1.50rem;
+    --text-xl: 2rem;
+    --text-2xl: 3rem;
+    --text-3xl: 4rem;
+}
+
+.navbar {
+    width: 175px;
+    min-height: 100vh;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 500ms;
+}
+
+.navbar__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav__item {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: var(--text-base);
+    color: white;
+    padding: 15px;
+    width: 100%;
+    transition: 250ms;
+    cursor: pointer;
+}
+
+.nav__item:hover {
+    color: black;
+    background-color: white;
+}
+
+.closed {
+    transform: translateX(-175px);
+}
+
+@media (min-width: 1280px) {
+    .closed {
+        transform: none;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: black;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 98;
+}
+
+.header > button > i {
+    font-size: var(--text-lg);
+    color: white;
+}
+
+@media (min-width: 1280px) {
+    .header {
+        display: none;
+    }
+}
+
+.container {
+    position: relative;
+}
+
+.layout {  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    gap: 16px;
+}
+  
+.layout__item {
+    background-color: red;
+    width: 250px;
+    height: 400px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 8px;
+
+    object-fit: cover;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.layout__item:nth-child(1) {
+    background-image: url('../imgs/men.jpg');
+}
+
+.layout__item:nth-child(2) {
+    background-image: url('../imgs/women.jpg');
+}
+
+.layout__item:nth-child(3) {
+    background-image: url('../imgs/women.jpg');
+}
+
+.layout__item:nth-child(4) {
+    background-image: url('../imgs/men.jpg');
+}
+
+.layout__item:nth-child(5) {
+    background-image: url('../imgs/men.jpg');
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.section > p {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.sect1 {
+    position: relative;
+    background-image: url("../imgs/heroimg.jpg");
+    background-size: cover;
+}
+
+.sect1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(165deg, rgba(0,0,0,0.4990371148459384) 0%, rgba(0,0,0,1) 75%);;
+}
+
+.sect1 > h1 {
+    position: relative;
+    z-index: 10;
+    font-size: var(--text-2xl);
+    color: white;
+}
+
+.sect1 > p {
+    position: relative;
+    z-index: 10;
+    color: white;
+}
+
+@media (min-width: 640px) {
+    .sect1 > h1 {
+        font-size: var(--text-3xl);
+    }
+}
+
+.goto {
+    position: relative;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+
+.sect2 {
+    background-color: black;
+    color: white;
+}
+
+.layout__item::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(165deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);;
+    width: 100%;
+    height: 100%;
+}
+
+.layout__item > h2 {
+    position: relative;
+    z-index: 10;
+    padding: 25px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card {
+    margin: 0 25px 0 200px;
+    padding: 50px;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card > img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about__team {
+    max-width: 500px;
+}
+
+.sect3 {
+    background-color: rgb(10, 10, 10);
+}
+
+a {
+    color: white;
+    text-decoration: underline;
+}
